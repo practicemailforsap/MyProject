@@ -1,0 +1,47 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:form="sap.ui.layout.form">
+	<Table id="idTable" items="{/suppliers}" type="Navigation">
+		<headerToolbar>
+			<Toolbar>
+				<ToolbarSpacer/>
+				<!-- to right justify the button for user experience-->
+				<Button icon="sap-icon://filter" tooltip="Country Filter" press="onFilter" search="onCountrySerach"></Button>
+			</Toolbar>
+		</headerToolbar>
+		<columns>
+			<Column>
+				<Text text="Name"></Text>
+			</Column>
+			<Column>
+				<Text text="City"></Text>
+			</Column>
+			<Column>
+				<Text text="Since When"></Text>
+			</Column>
+			<Column>
+				<Text text="Country"></Text>
+			</Column>
+		</columns>
+		<items>
+			<ColumnListItem
+			type = "Active"
+			press="onItemSelect">
+			<cells>
+				<Text text="{name}"></Text>
+				<Input value="{city}" showValueHelp="true" valueHelpRequest="onF4Help" search="onCitySearch"></Input>
+				<Text text="{sinceWhen}"></Text>
+				<Text text="{country}"></Text>
+			</cells>
+		</ColumnListItem>
+		</items>
+		
+	</Table>
+	<form:SimpleForm>
+		<form:content>
+			<core:Title text="Supplier Data" id="__title1"/>
+			<Label text="Benefit"/>
+			<Text text="{benefit}"/>
+			<Label text="Nature"/>
+			<Text text="{type}"/>
+		</form:content>
+	</form:SimpleForm>
+</core:FragmentDefinition>

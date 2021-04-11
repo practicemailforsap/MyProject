@@ -1,0 +1,44 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" controllerName="modelDemo.fiori.controller.View2">
+	<Page title="View 2" showNavButton="true" navButtonPress="onBack">
+		<content>
+			<ObjectHeader title="{name}" intro="{benefit}" number="{price}" numberUnit="{unit}" icon="{photo}"/>
+			<Label text="{name}"/>
+			<IconTabBar id="idIconTabBar">
+				<items>
+					<IconTabFilter id="zumba" key="moreInfo" text="More Info." icon="sap-icon://bullet-text" iconColor="Negative">
+						<content>
+							<core:Fragment fragmentName="modelDemo.fiori.fragments.moreInfo" type="XML"></core:Fragment>
+						</content>
+					</IconTabFilter>
+					<IconTabFilter id="zumba1" key="suppData" text="Supplier Data" icon="sap-icon://supplier">
+						<content>
+							<core:Fragment fragmentName="modelDemo.fiori.fragments.supplierData" type="XML"></core:Fragment>
+						</content>
+					</IconTabFilter>
+					<IconTabFilter id="zumba2" key="selectCity" text="City select" icon="sap-icon://home">
+						<content>
+							<core:Fragment fragmentName="modelDemo.fiori.fragments.selectCity" type="XML"></core:Fragment>
+						</content>
+					</IconTabFilter>
+				</items>
+			</IconTabBar>
+			<!--<Button text="back" press="onBack" icon="sap-icon://nav-back"></Button>-->
+		</content>
+		<footer>
+			<Toolbar>
+				<!--<Button id="messagePopoverBtn1"-->
+				<!--	icon="{ path: '/', formatter: '.buttonIconFormatter' }"-->
+				<!--	type="{ path: '/', formatter: '.buttonTypeFormatter' }"-->
+				<!--	press=".handleMessagePopoverPress"/>-->
+				<Button id="messagePopoverBtn"
+					visible= "true"
+					text="popover"
+					type="Reject"
+					press="handleMessagePopoverPress"/>
+				<ToolbarSpacer/>
+				<Button text="Approve" type="Accept" press="onAccept"></Button>
+				<Button text="Reject" type="Reject" press="onReject"></Button>
+			</Toolbar>
+		</footer>
+	</Page>
+</mvc:View>

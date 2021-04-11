@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script id="sap-ui-bootstrap"
+				src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
+				data-sap-ui-libs="sap.m,sap.ui.layout,sap.ui.comp"
+				data-sap-ui-theme="sap_bluecrystal"
+				data-sap-ui-resourceroots='
+				{"modelDemo.fiori" : "./"}'></script>
+				<!-- data-sap-xx-bindingSyntax="complex" is used as we are using complex binding
+				{=$(/empStr/salary) > 50000 : false ? true}-->
+			
+		<style>
+			.anubhav {
+				border: 5px solid LightSeaGreen;
+			}
+		</style>
+		
+		<script>
+		//move the content to component.js
+		//index.html is for local testing // but component.js is used for FLD
+			// var oAppView = new sap.ui.view({
+			// 	id:"idAppView",
+			// 	viewName:"modelDemo.fiori.view.App",
+			// 	type: sap.ui.core.mvc.ViewType.XML
+			// });
+			var oCompContainer = new sap.ui.core.ComponentContainer({
+				name: "modelDemo.fiori"
+			});
+			// var oShell = sap.m.Shell({
+			// 	app: oCompContainer
+			// });
+			// oShell.placeAt("content");
+			oCompContainer.placeAt("content");
+		</script>
+
+		
+	<body class="sapUiBody">
+		<div id="content"></div>
+	</body>
+</html>

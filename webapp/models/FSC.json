@@ -1,0 +1,77 @@
+{
+	"fruits20":[{
+		"name":"apple",
+		"price":"125/kg",
+		"unit":"INR",
+		"benefit":"Good for Diabetics and Blood Sugar regulation,Brain Power,Weight loss",
+		"type":"pome",
+		"availability":"Available",
+		"color":"Red",
+		"photo":"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcScD77GS5QB44i5N86OYNQnAS1BsyyJ067JYQ&usqp=CAU"
+	},
+	{
+		"name":"orange",
+		"price":"40/kg",
+		"unit":"INR",
+		"benefit":"",
+		"type":"alkaline",
+		"availability":"Discontinue",
+		"color":"orange",
+		"photo":"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQWCFisTYzpRswW8s1sIdjtYDMDyH3okndInA&usqp=CAU"
+	},
+	{
+		"name":"lemon",
+		"price":"",
+		"unit":"",
+		"benefit":"",
+		"type":"alkaline",
+		"availability":"Available/Discontinue/Out-of-Stock",
+		"color":"yellow",
+		"photo":"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQWCFisTYzpRswW8s1sIdjtYDMDyH3okndInA&usqp=CAU"
+	},
+	{
+		"name":"lemon",
+		"price":"",
+		"unit":"",
+		"benefit":"",
+		"type":"alkaline",
+		"availability":"Available/Discontinue/Out-of-Stock",
+		"color":"",
+		"photo":""
+	},
+	{
+		"name":"banana",
+		"price":"",
+		"unit":"",
+		"benefit":"",
+		"type":"peeloff"
+	}],
+	"suppliers15":[{
+		"name":"",
+		"city":"",
+		"sinceWhen":"",
+		"country":"",
+		"contactPerson":"",
+		"operatingHours":""
+	},{
+		"name":"",
+		"city":"",
+		"sinceWhen":"",
+		"country":"",
+		"contactPerson":"",
+		"operatingHours":""
+	}],
+	"cities10":[{
+		"cityName":"Kotagarh",
+		"famousForFruit":"Apple",
+		"state":"Himachal Pradesh",
+		"remarks":"Kotagarh Wild Sanctuary"
+	},
+	{
+		"cityName":"Nagpur",
+		"famousForFruit":"Orange",
+		"state":"Maharastra",
+		"remarks":"Orange City"
+	}]
+	
+}

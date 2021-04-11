@@ -1,0 +1,29 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:form="sap.ui.layout.form">
+	<Select items="{/cities}">
+		<items>
+			<core:Item key="{city}" text="{city}"></core:Item>
+		</items>
+	</Select>
+	<ComboBox items="{/cities}">
+		<items>
+			<core:Item key="{city}" text="{city}"></core:Item>
+		</items>
+	</ComboBox>
+	<MultiComboBox items="{/cities}">
+		<items>
+			<core:Item key="{city}" text="{city}"></core:Item>
+		</items>
+	</MultiComboBox>
+	<DatePicker></DatePicker>
+	<Label text="City"></Label>
+	<Input id ="idCity"></Input>
+	<form:SimpleForm>
+		<form:content>
+			<core:Title text="Select City" id="__title2"/>
+			<Label text="Benefit"/>
+			<Text text="{benefit}"/>
+			<Label text="Nature"/>
+			<Text text="{type}"/>
+		</form:content>
+	</form:SimpleForm>
+</core:FragmentDefinition>

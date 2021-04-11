@@ -1,0 +1,112 @@
+{
+	"sap.ui": {
+		"_version": "1.3.0",
+		"technology": "UI5",
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		},
+		"supportedThemes": ["sap_bluecrystal"],
+		"icons": {
+			"icon": "sap-icon://accelerated"
+		}
+	},
+	"sap.ui5": {
+		"_version": "1.2.0",
+		"dependencies": {
+			"minUI5Version": "1.44",
+			"libs": {
+				"sap.ui.core": {
+					"minVersion": "1.44"
+				},
+				"sap.m": {
+					"minVersion": "1.44"
+				},
+				"sap.ui.layout": {
+					"minVersion": "1.44"
+				}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"resources": {
+			"css": [{
+				"uri": "css/style.css",
+				"id": "mycss"
+			}]
+		},
+		"models": {
+			"": {
+				"type": "sap.ui.model.json.JSONModel",
+				"settings": {},
+				"uri": "models/mockData/fruits.json",
+				"preload": false
+			},
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"uri": "i18n/i18n.properties"
+			}
+		},
+		"rootView": {
+			"viewName": "modelDemo.fiori.view.App",
+			"type": "XML"
+
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewPath": "modelDemo.fiori.view",
+				"viewType": "XML",
+				"controlId": "myApp"
+			},
+			"routes": [{
+				"pattern": "",
+				"name": "master",
+				"target": ["donald","empty"]
+			},
+			{
+				"pattern": "fruit/{fruitId}",
+				"name": "detail",
+				"target":  ["donald","trump"]	
+			}],
+			"targets": {
+				"donald":{
+					"viewName":"View1",
+					"controlAggregation":"masterPages",
+					"viewId":"idView1",
+					"viewLevel": 1
+				},
+				"empty":{
+					"viewName":"Empty",
+					"controlAggregation":"detailPages",
+					"viewId":"idEmpty",
+					"viewLevel": 1
+				},
+				"trump":{
+					"viewName":"View2",
+					"controlAggregation":"detailPages",
+					"viewId":"idView2",
+					"viewLevel": 2
+				}
+			}
+		}
+	},
+	"sap.app": {
+		"_version": "1.3.0",
+		"id": "modelDemo.fiori",
+		"type": "application",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDesc}}",
+		"tags": {
+			"keywords": ["{{kw1}}", "{{kw2}}"]
+		},
+		"ach": "FIN-AR"
+	},
+	"_version": "1.9.0"
+}
